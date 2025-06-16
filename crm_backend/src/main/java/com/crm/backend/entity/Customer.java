@@ -23,6 +23,6 @@ public class Customer {
     @Column(unique = true)
     private String email;
     public String address;
-    private String password;
+    private String user_password;
     private boolean active = false;
 }
