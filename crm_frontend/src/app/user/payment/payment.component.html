@@ -1,1 +1,35 @@
-<p>payment works!</p>
+<div class="payment-container">
+    <div class="payment-left">
+        <table>
+            <tr>
+                <th>Pack</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <th>Pack Name</th>
+                <td>{{plan.name}}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{plan.description}}</td>
+            </tr>
+            <tr>
+                <th>Data</th>
+                <td>{{plan.dataLimit}} GB</td>
+            </tr>
+            <tr>
+                <th>Voice</th>
+                <td>{{plan.voiceLimit}} Minutes</td>
+            </tr>
+            <tr>
+                <th>SMS</th>
+                <td>{{plan.smsLimit}}</td>
+            </tr>
+            <tr>
+                <th>Price</th>
+                <td>{{plan.price}}</td>
+            </tr>
+        </table>
+    </div>
+    <div class="payment-right"></div>
+</div>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserapicallsService } from '../../service/userapicalls.service';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-recharge',
@@ -13,7 +14,7 @@ import { CommonModule } from '@angular/common';
 export class RechargeComponent implements OnInit{
 
   data:any;
-  constructor(private http: UserapicallsService){}
+  constructor(private http: UserapicallsService, private router: Router){}
   ngOnInit(): void {
     this.http.getAllPlans().subscribe({
       next: (res)=> {
@@ -27,7 +28,8 @@ export class RechargeComponent implements OnInit{
 
   setPlan(plan: any)
   {
-    sessionStorage.setItem("plan",plan);
+    sessionStorage.setItem("plan",JSON.stringify(plan));
+    this.router.navigate(['customer/payment'])
   }
 
 }

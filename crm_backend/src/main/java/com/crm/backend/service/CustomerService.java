@@ -47,13 +47,4 @@ public class CustomerService {
 	public List<Plan> getAllPlan() {
 		return planRepository.findAll();
 	}
-
-	public void sendMessage() {
-		SimpleMailMessage message = new SimpleMailMessage();
-        message.setFrom("noreply@example.com");
-        message.setTo("shervin@gmail.com");
-        message.setSubject("Test");
-        message.setText("Test Email");
-        mailSender.send(message);
-	}
 }

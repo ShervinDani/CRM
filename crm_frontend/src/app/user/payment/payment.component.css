@@ -1,0 +1,14 @@
+.payment-container{
+    display: flex;
+}
+.payment-left{
+    flex: 1;
+    background-color: #000446;
+}
+.payment-right{
+    flex: 1;
+}
+
+table{
+    color: white;
+}

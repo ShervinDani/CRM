@@ -50,7 +50,6 @@ public class CustomerController {
 	@GetMapping("getallplans")
 	public ResponseEntity<List<Plan>> getAllPlans()
 	{
-		customerService.sendMessage();
 		return ResponseEntity.ok(customerService.getAllPlan());
 	}
 	
