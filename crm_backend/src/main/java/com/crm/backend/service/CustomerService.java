@@ -3,6 +3,8 @@ package com.crm.backend.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 
 import com.crm.backend.entity.Customer;
@@ -15,6 +17,8 @@ import com.crm.backend.repository.PlanRepository;
 @Service
 public class CustomerService {
 
+	@Autowired
+    private JavaMailSender mailSender;
 	@Autowired
 	private CustomerRepository customerRepository;
 	@Autowired
@@ -42,5 +46,14 @@ public class CustomerService {
 
 	public List<Plan> getAllPlan() {
 		return planRepository.findAll();
+	}
+
+	public void sendMessage() {
+		SimpleMailMessage message = new SimpleMailMessage();
+        message.setFrom("noreply@example.com");
+        message.setTo("shervin@gmail.com");
+        message.setSubject("Test");
+        message.setText("Test Email");
+        mailSender.send(message);
 	}
 }

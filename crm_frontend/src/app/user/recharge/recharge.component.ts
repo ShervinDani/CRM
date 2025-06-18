@@ -17,9 +17,7 @@ export class RechargeComponent implements OnInit{
   ngOnInit(): void {
     this.http.getAllPlans().subscribe({
       next: (res)=> {
-        console.log(res);
         this.data = res;
-        console.log(this.data)
       },
       error: (err) => {
         console.log(err);
