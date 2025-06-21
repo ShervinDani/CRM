@@ -1,15 +1,13 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-header',
+  selector: 'app-retailerheader',
   imports: [RouterOutlet],
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  templateUrl: './retailerheader.component.html',
+  styleUrl: './retailerheader.component.css'
 })
-export class HeaderComponent {
-
+export class RetailerheaderComponent {
   constructor(private router: Router){}
   changeComponent(component: string){
     this.router.navigate([component])

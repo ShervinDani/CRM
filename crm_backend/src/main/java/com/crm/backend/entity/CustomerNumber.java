@@ -16,6 +16,7 @@ public class CustomerNumber {
 	@Id
 	private String phoneNumber;
 	private String status;
+	private String type;
 	@ManyToOne
     @JoinColumn(name = "customer_id", nullable = false)
     private Customer customer;
